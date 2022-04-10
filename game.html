@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="game.css" type="text/css">
+    <title>Zombie game</title>
+    <script>
+        function myMove() {
+          let id = null;
+          const elem = document.getElementById("animate");   
+          let pos = 400;
+          clearInterval(id);
+          id = setInterval(frame, 10);
+          function frame() {
+            if (pos == 450) {
+              alert("Game over");
+            } else {
+              pos++; 
+              elem.style.top = pos + "px"; 
+              elem.style.left = pos + "px"; 
+            }
+          }
+        }
+        </script>
+</head>
+<body>
+    <div style="position: relative; left: 0; top: 0;">
+        <img src="Vector.jpg" class="bg">
+        <img src="door.png" class="door">
+        <img src="green_big.png" class="green">
+        <img src="green_rect_2.png" class="green_rect_2">
+        <img src="green_rect_3.png" class="green_rect_3">
+        <img src="innermost_green.png" class="innermost_green">
+        <img src="floor.png" class="floor">
+        <img src="Rectangle.png" class="Rectangle">
+        <img src="baby_jombee@300x-8 1.png" class="jombee" id="animate">
+        <img src="shoot_outer.png" class="shoot_outer">
+        <img src="shoot_rect.png" class="shoot_rect">
+        <img src="blob.png" class="blob1">
+        <img src="blob.png" class="blob2">
+        <img src="right.png" class="right">
+        <img src="left.png" class="left">
+        <img src="SHOOT.png" class="shoot">
+        <button onclick="myMove()"><img src= "SHOOT.png" class="shoot"></button>
+    </div>
+    </body>
+</html>
